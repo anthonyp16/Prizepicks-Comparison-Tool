@@ -1,8 +1,6 @@
 import asyncio
 from playwright.sync_api import sync_playwright
 import json
-from datetime import datetime
-import os.path
 
 with sync_playwright() as p:
      browser = p.firefox.launch(headless=False)
@@ -52,7 +50,3 @@ draftkings_NBA_PTS.close()
 draftkings_NFL_PASSTDS = open('draftkings_NFL_PassTds.txt', 'wb')
 draftkings_NFL_PASSTDS.write(html7.encode("utf-8"))
 draftkings_NFL_PASSTDS.close()
-
-with open('last_updated.txt', 'w') as dt:
-     a = datetime.today().strftime('%m-%d-%y %H:%M %p')
-     dt.write(a)
