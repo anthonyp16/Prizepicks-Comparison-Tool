@@ -1,3 +1,4 @@
+from time import strftime
 import streamlit as st
 import pandas as pd
 from gsheetsdb import connect
@@ -31,4 +32,4 @@ with header:
 with dataset:
     table = pd.DataFrame(rows)
     table.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Last Updated', 'Line', 'Probability (%)', 'Favor']
-    st.dataframe(table.style.highlight_quantile(axis=0, subset='Probability (%)', color='#97F589', q_right=1, q_left=0.8).format({"Line": "{:.1f}", "Probability (%)": "{:.1f}"}), use_container_width=True)
+    st.dataframe(table.style.highlight_quantile(axis=0, subset='Probability (%)', color='#97F589', q_right=1, q_left=0.8).format({"Line": "{:.1f}", "Probability (%)": "{:.1f}"}).format({"Last Updated": strftime()}) , use_container_width=True)
