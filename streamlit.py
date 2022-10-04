@@ -34,4 +34,4 @@ with header:
 with dataset:
     table = pd.DataFrame(rows)
     table.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Last Updated', 'Line', 'Probability (%)', 'Favor']
-    st.dataframe(table.style.highlight_quantile(axis=0, subset='Probability (%)', color='#97F589', q_right=1, q_left=0.8).format({"Line": "{:.1f}", "Probability (%)": "{:.1f}", "Last Updated": strftime("%m/%d/%y %I:%M %p")}), use_container_width=True)
+    st.dataframe(table.style.highlight_quantile(axis=0, subset='Probability (%)', color='#97F589', q_right=1, q_left=0.8).format({"Line": "{:.1f}", "Probability (%)": "{:.1f}", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %I:%M %p"))}), use_container_width=True)
