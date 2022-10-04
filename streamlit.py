@@ -14,8 +14,7 @@ def run_query(query):
     rows = rows.fetchall()
     return rows
 
-with open('last_updated.txt', 'r') as file:
-    update = file.read()
+
 
 sheet_url = st.secrets["public_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
@@ -33,5 +32,3 @@ with dataset:
     table = pd.DataFrame(rows)
     table.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Last Updated', 'Line', 'Probability (%)', 'Favor']
     st.dataframe(table.style.highlight_quantile(axis=0, subset='Probability (%)', color='#97F589', q_right=1, q_left=0.8).format({"Line": "{:.1f}", "Probability (%)": "{:.1f}"}), use_container_width=True)
-    st.write("Last Updated: ", update)
-
