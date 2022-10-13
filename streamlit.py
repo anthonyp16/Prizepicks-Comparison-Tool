@@ -17,8 +17,8 @@ def run_query(query):
 
 
 
-# sheet_url = st.secrets["public_gsheets_url"]
-# rows = run_query(f'SELECT * FROM "{sheet_url}"')
+sheet_url = st.secrets["public_gsheets_url"]
+rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 header = st.container()
 dataset = st.container()
@@ -32,9 +32,9 @@ with header:
 
 
 with dataset:
-    #df = pd.DataFrame(rows)
+    df = pd.DataFrame(rows)
 
-    df = pd.read_csv("MAIN_TABLE.csv")
+    #df = pd.read_csv("MAIN_TABLE.csv")
     df.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Last Updated', 'Line', 'Probability (%)', 'Favor']
     #df = df.style.highlight_quantile(axis=0, subset='Probability (%)', color='#97F589', q_right=1, q_left=0.8).format({"Line": "{:.1f}", "Probability (%)": "{:.1f}"})
 
@@ -42,5 +42,5 @@ with dataset:
 
     filtered_df = df[df["Sport"].isin(sports)]
     #st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability (%)', color='#97F589', q_right=1, q_left=0.8).format({"Line": "{:.1f}", "Probability (%)": "{:.1f}"}))
-    st.dataframe(df.style.highlight_quantile(axis=0, subset='Probability (%)', color='#97F589', q_right=1, q_left=0.8).format({"Line": "{:.1f}", "Probability (%)": "{:.1f}", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %I:%M %p"))}), use_container_width=True)
+    st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability (%)', color='#97F589', q_right=1, q_left=0.8).format({"Line": "{:.1f}", "Probability (%)": "{:.1f}", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %I:%M %p"))}), use_container_width=True)
 
