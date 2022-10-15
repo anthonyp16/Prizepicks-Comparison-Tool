@@ -8,7 +8,7 @@ conn = connect()
 
 
 # Perform SQL query on the Google Sheet.
-# Uses st.cache to only rerun when the query changes or after 10 min.
+# Uses st.cache to only rerun when the query changes or after 3 min.
 @st.cache(ttl=180)
 def run_query(query):
     rows = conn.execute(query, headers=1)
@@ -42,5 +42,5 @@ with dataset:
 
     filtered_df = df[df["Sport"].isin(sports)]
     #st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability (%)', color='#97F589', q_right=1, q_left=0.8).format({"Line": "{:.1f}", "Probability (%)": "{:.1f}"}))
-    st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability (%)', color='#97F589', q_right=1, q_left=0.8).format({"Line": "{:.1f}", "Probability (%)": "{:.1f}", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %I:%M %p"))}), use_container_width=True)
+    st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability (%)', color='#97F589', q_right=1, q_left=0.8).format({"Line": "{:.1f}", "Probability (%)": "{:.1f}", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))}), use_container_width=True)
 
