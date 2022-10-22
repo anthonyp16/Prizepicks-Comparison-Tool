@@ -31,12 +31,12 @@ with header:
     st.markdown("*For example, Lionel Messi at 2 Shots is being offered on Prizepicks as an over/under, but on Draftkings, the over is -150 (60%). This is **not** a 50/50 play, there is a favor towards the over.*")
 
 def highlight(s):
-    is_max = s == 'Under +'
-    return ['background-color: PaleTurquoise' if v else '' for v in is_max]
+    is_plus = s == 'Under +'
+    return ['background-color: GhostWhite' if v else '' for v in is_plus]
 
 def highlight2(s):
-    is_max = s == 'Over +'
-    return ['background-color: PaleTurquoise' if v else '' for v in is_max]
+    is_plus = s == 'Over +'
+    return ['background-color: GhostWhite' if v else '' for v in is_plus]
 
 with dataset:
     df = pd.DataFrame(rows)
