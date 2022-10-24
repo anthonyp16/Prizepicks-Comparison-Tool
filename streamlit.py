@@ -29,11 +29,11 @@ with header:
 
 def highlight(s):
     is_plus = s == 'Under +'
-    return ['background-color: #5A87FF' if v else '' for v in is_plus]
+    return ['background-color: #26B5FF' if v else '' for v in is_plus]
 
 def highlight2(s):
     is_plus = s == 'Over +'
-    return ['background-color: #5A87FF' if v else '' for v in is_plus]
+    return ['background-color: #26B5FF' if v else '' for v in is_plus]
 
 with dataset:
     df = pd.DataFrame(rows)
@@ -48,7 +48,7 @@ with dataset:
 #     # .apply(highlight)\
 #     # .apply(highlight2))
 
-    st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability', color='LimeGreen', q_right=1, q_left=0.8)\
+    st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability', color='#64ED8D', q_right=1, q_left=0.8)\
     .format({"Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))})\
     .apply(highlight)\
     .apply(highlight2), use_container_width=True)
@@ -63,4 +63,5 @@ with FAQs:
             The plus sign signifies an additonal edge for this pick. It means the tool found a favor towards Over or Under, as well as a better line on Prizepicks.")
         st.markdown("*For example, Steph Curry at 28.5 points is being offered on Prizepicks, but on Draftkings, the over is -135 (57%)\
             **AND** the line is 31 points. The odds are **actually better than they appear** because of the better line on Prizepicks.*")
-
+    with st.expander("The table is too small. How do I make it bigger?"):
+        st.write("**Option 1:**Hover over the table until a icon with two arrows appear.“[![Title](<https://pic.onlinewebfonts.com/svg/img_519106.png)](<Website URL>)")
