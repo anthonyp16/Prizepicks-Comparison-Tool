@@ -2,9 +2,7 @@ from time import strftime
 import streamlit as st
 import pandas as pd
 from gsheetsdb import connect
-import re
 conn = connect()
-
 
 
 # Perform SQL query on the Google Sheet.
@@ -14,7 +12,6 @@ def run_query(query):
     rows = conn.execute(query, headers=1)
     rows = rows.fetchall()
     return rows
-
 
 
 sheet_url = st.secrets["public_gsheets_url"]
@@ -55,3 +52,7 @@ with dataset:
     .format({"Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))})\
     .apply(highlight)\
     .apply(highlight2), use_container_width=True)
+
+st.set_page_config(
+    layout="wide"
+)
