@@ -50,5 +50,5 @@ with dataset:
     st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability', color='#97F589', q_right=1, q_left=0.8)\
     .format({"Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))})\
     .apply(highlight)\
-    .apply(highlight2))
+    .apply(highlight2), use_container_width=True)
 
