@@ -4,6 +4,9 @@ import pandas as pd
 from gsheetsdb import connect
 conn = connect()
 
+st.set_page_config(
+    layout="wide"
+)
 
 # Perform SQL query on the Google Sheet.
 # Uses st.cache to only rerun when the query changes or after 3 min.
@@ -53,6 +56,3 @@ with dataset:
     .apply(highlight)\
     .apply(highlight2))
 
-st.set_page_config(
-    layout="wide"
-)
