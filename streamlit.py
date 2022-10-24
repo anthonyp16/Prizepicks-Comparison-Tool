@@ -3,7 +3,11 @@ import streamlit as st
 import pandas as pd
 from gsheetsdb import connect
 conn = connect()
-
+Wide_mode = False
+if Wide_mode:
+    st.set_page_config(
+    layout="wide"
+)
 # Perform SQL query on the Google Sheet.
 # Uses st.cache to only rerun when the query changes or after 3 min.
 @st.cache(ttl=180)
@@ -53,8 +57,3 @@ with dataset:
     .apply(highlight2), use_container_width=st.session_state.use_container_width)
 
 Wide_mode = st.checkbox("Wide Mode", value=False, key="use_container_width")
-
-if Wide_mode:
-    st.set_page_config(
-    layout="wide"
-)
