@@ -63,5 +63,5 @@ with FAQs:
             The plus signifies an additonal edge for this pick. It means the tool found a favor towards Over or Under as well as a better line on Prizepicks.\
                 Not only is there an edge to one side, but the line is also better on Prizepicks.")
         st.markdown("*For example, Steph Curry at 28.5 points is being offered on Prizepicks, but on Draftkings, the over is -135 (57%)\
-            **AND** the line is 31 points. The odds are actually better than they appear because of the better line on Prizepicks.")
+            **AND** the line is 31 points. The odds are **actually better than they appear** because of the better line on Prizepicks.*")
 
