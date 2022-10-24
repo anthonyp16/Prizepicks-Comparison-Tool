@@ -29,11 +29,11 @@ with header:
 
 def highlight(s):
     is_plus = s == 'Under +'
-    return ['background-color: GhostWhite' if v else '' for v in is_plus]
+    return ['background-color: LightCyan' if v else '' for v in is_plus]
 
 def highlight2(s):
     is_plus = s == 'Over +'
-    return ['background-color: GhostWhite' if v else '' for v in is_plus]
+    return ['background-color: LightCyan' if v else '' for v in is_plus]
 
 with dataset:
     df = pd.DataFrame(rows)
@@ -59,5 +59,5 @@ with FAQs:
     with st.expander("Is this tool free?"):
         st.write("Yes. For now, this tool will remain completely free :)")
     with st.expander("What do the blue boxes mean?"):
-        st.write("")
+        st.write("Yo")
 
