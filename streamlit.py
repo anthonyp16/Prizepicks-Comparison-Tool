@@ -29,11 +29,11 @@ with header:
 
 def highlight(s):
     is_plus = s == 'Under +'
-    return ['background-color: LightCyan' if v else '' for v in is_plus]
+    return ['background-color: #5A87FF' if v else '' for v in is_plus]
 
 def highlight2(s):
     is_plus = s == 'Over +'
-    return ['background-color: LightCyan' if v else '' for v in is_plus]
+    return ['background-color: #5A87FF' if v else '' for v in is_plus]
 
 with dataset:
     df = pd.DataFrame(rows)
@@ -60,8 +60,7 @@ with FAQs:
         st.write("Yes. For now, this tool will remain completely free :)")
     with st.expander("What do the blue boxes mean?"):
         st.markdown("You may notice that there are rows in the *Favor* column that say *Under +* or *Over +*.\
-            The plus signifies an additonal edge for this pick. It means the tool found a favor towards Over or Under as well as a better line on Prizepicks.\
-                Not only is there an edge to one side, but the line is also better on Prizepicks.")
+            The plus sign signifies an additonal edge for this pick. It means the tool found a favor towards Over or Under, as well as a better line on Prizepicks.")
         st.markdown("*For example, Steph Curry at 28.5 points is being offered on Prizepicks, but on Draftkings, the over is -135 (57%)\
             **AND** the line is 31 points. The odds are **actually better than they appear** because of the better line on Prizepicks.*")
 
