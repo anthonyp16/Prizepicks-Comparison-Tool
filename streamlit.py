@@ -19,6 +19,7 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 header = st.container()
 dataset = st.container()
 filters = st.container()
+FAQs = st.container()
 
 with header:
     st.title("Prizepicks Line Comparison Tool")
@@ -37,18 +38,26 @@ def highlight2(s):
 with dataset:
     df = pd.DataFrame(rows)
     
-    #df = pd.read_csv("MAIN_TABLE.csv")
+#     #df = pd.read_csv("MAIN_TABLE.csv")
     df.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Last Updated', 'Line', 'Probability', 'Favor']
     sports = st.multiselect('Filter by Sport', df['Sport'].unique(), default=df['Sport'].unique())
 
     filtered_df = df[df["Sport"].isin(sports)]
-    # st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability (%)', color='SpringGreen', q_right=1, q_left=0.8)\
-    # .format({"Line": "{:.1f}", "Probability (%)": "{:.1f}"})\
-    # .apply(highlight)\
-    # .apply(highlight2))
+#     # st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability (%)', color='SpringGreen', q_right=1, q_left=0.8)\
+#     # .format({"Line": "{:.1f}", "Probability (%)": "{:.1f}"})\
+#     # .apply(highlight)\
+#     # .apply(highlight2))
 
     st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability', color='#97F589', q_right=1, q_left=0.8)\
     .format({"Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))})\
     .apply(highlight)\
     .apply(highlight2), use_container_width=True)
+
+with FAQs:
+    st.markdown("""---""")
+    st.subheader("FAQs")
+    with st.expander("Is this tool free?"):
+        st.write("Yes. For now, this tool will remain completely free :)")
+    with st.expander("What do the blue boxes mean?"):
+        st.write("")
 
