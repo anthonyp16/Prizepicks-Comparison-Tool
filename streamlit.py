@@ -64,4 +64,5 @@ with FAQs:
         st.markdown("*For example, Steph Curry at 28.5 points is being offered on Prizepicks, but on Draftkings, the over is -135 (57%)\
             **AND** the line is 31 points. The odds are **actually better than they appear** because of the better line on Prizepicks.*")
     with st.expander("The table is too small. How do I make it bigger?"):
-        st.write("**Option 1:**Hover over the table until a icon with two arrows appear.“[![Title](https://pic.onlinewebfonts.com/svg/img_519106.png)](<Website URL>)")
+        st.markdown("**Option 1:** Hover over the table until a icon with two diagonal arrows appear. Click that and the table will take up your whole screen.")
+        st.markdown("**Option 2:** Click the menu icon on the top right *(3 Vertical lines). Then click Settings -> Wide Mode.")
