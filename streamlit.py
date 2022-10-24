@@ -59,9 +59,9 @@ with FAQs:
     with st.expander("Is this tool free?"):
         st.write("Yes. For now, this tool will remain completely free :)")
     with st.expander("What do the blue boxes mean?"):
-        st.markdown("You may notice that there are rows in the *Favor* column that say *Under +* or *Over +*.\
+        st.markdown("You may notice that there are rows in the *Favor* column that say <u>*Under +*</u> or <u>*Over +*.</u>\
             The plus sign signifies an additonal edge for this pick. It means the tool found a favor towards Over or Under, as well as a better line on Prizepicks.")
         st.markdown("*For example, Steph Curry at 28.5 points is being offered on Prizepicks, but on Draftkings, the over is -135 (57%)\
             **AND** the line is 31 points. The odds are **actually better than they appear** because of the better line on Prizepicks.*")
     with st.expander("The table is too small. How do I make it bigger?"):
-        st.write("**Option 1:**Hover over the table until a icon with two arrows appear.“[![Title](<https://pic.onlinewebfonts.com/svg/img_519106.png)](<Website URL>)")
+        st.write("**Option 1:**Hover over the table until a icon with two arrows appear.“[![Title](https://pic.onlinewebfonts.com/svg/img_519106.png)](<Website URL>)")
