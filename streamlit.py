@@ -3,11 +3,7 @@ import streamlit as st
 import pandas as pd
 from gsheetsdb import connect
 conn = connect()
-Wide_mode = False
-if Wide_mode:
-    st.set_page_config(
-    layout="wide"
-)
+
 # Perform SQL query on the Google Sheet.
 # Uses st.cache to only rerun when the query changes or after 3 min.
 @st.cache(ttl=180)
@@ -54,6 +50,5 @@ with dataset:
     st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability', color='#97F589', q_right=1, q_left=0.8)\
     .format({"Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))})\
     .apply(highlight)\
-    .apply(highlight2), use_container_width=st.session_state.use_container_width)
+    .apply(highlight2))
 
-Wide_mode = st.checkbox("Wide Mode", value=False, key="use_container_width")
