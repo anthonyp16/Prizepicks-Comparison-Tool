@@ -57,7 +57,7 @@ with FAQs:
     st.markdown("""---""")
     st.subheader("FAQs")
     with st.expander("Is this tool free?"):
-        st.write("Yes. While similar tools can cost around $20 to $100/Month, this tool will remain completely free. :smile:")
+        st.markdown("Yes. While similar tools can cost around $20 to $100/Month, this tool will remain completely free. :smile:")
     with st.expander("What do the blue highlights mean?"):
         st.markdown("You may notice that there are rows in the *Favor* column that say *Under +* or *Over +*.\
             The plus sign signifies an additonal edge for this pick. It means the tool found a favor towards Over or Under, as well as a better line on Prizepicks.")
