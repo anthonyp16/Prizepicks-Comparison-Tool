@@ -29,11 +29,11 @@ with header:
 
 def highlight(s):
     is_plus = s == 'Under +'
-    return ['background-color: #64BEFF' if v else '' for v in is_plus]
+    return ['background-color: #94d2ff' if v else '' for v in is_plus]
 
 def highlight2(s):
     is_plus = s == 'Over +'
-    return ['background-color: #64BEFF' if v else '' for v in is_plus]
+    return ['background-color: #94d2ff' if v else '' for v in is_plus]
 
 with dataset:
     df = pd.DataFrame(rows)
@@ -57,12 +57,12 @@ with FAQs:
     st.markdown("""---""")
     st.subheader("FAQs")
     with st.expander("Is this tool free?"):
-        st.write("Yes. For now, this tool will remain completely free :smile:")
+        st.write("Yes. While similar tools can cost around $20/Month, this tool will remain completely free. :smile:")
     with st.expander("What do the blue boxes mean?"):
         st.markdown("You may notice that there are rows in the *Favor* column that say *Under +* or *Over +*.\
             The plus sign signifies an additonal edge for this pick. It means the tool found a favor towards Over or Under, as well as a better line on Prizepicks.")
         st.markdown("*For example, Steph Curry at 28.5 points is being offered on Prizepicks, but on Draftkings, the over is -135 (57%)\
             **and** the line is 31 points. The odds are **actually better than they appear** because of the better line on Prizepicks.*")
-    with st.expander("The table is too small. How do I make it bigger?"):
+    with st.expander("The table is too small. How do I make it larger?"):
         st.markdown("**Option 1:** Hover over the table until a icon with two diagonal arrows appears. Click that and the table will take up your whole screen.")
         st.markdown("**Option 2:** Click the menu icon on the top right *(3 Vertical lines)*. Then click Settings -> Wide Mode.")
