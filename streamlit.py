@@ -30,11 +30,11 @@ with header:
 
 def highlight(s):
     is_plus = s == 'Under +'
-    return ['background-color: #94E8FF' if v else '' for v in is_plus]
+    return ['background-color: #6BB8FF' if v else '' for v in is_plus]
 
 def highlight2(s):
     is_plus = s == 'Over +'
-    return ['background-color: #94E8FF' if v else '' for v in is_plus]
+    return ['background-color: #6BB8FF' if v else '' for v in is_plus]
 
 with dataset:
     df = pd.DataFrame(rows)
@@ -49,7 +49,7 @@ with dataset:
 #     # .apply(highlight)\
 #     # .apply(highlight2))
 
-    st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability', color='#48F0A4', q_right=1, q_left=0.8)\
+    st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability', color='#48F084', q_right=1, q_left=0.8)\
     .format({"Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))})\
     .apply(highlight)\
     .apply(highlight2), use_container_width=True)
