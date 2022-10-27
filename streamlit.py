@@ -30,11 +30,11 @@ with header:
 
 def highlight(s):
     is_plus = s == 'Under +'
-    return ['background-color: #6BB8FF' if v else '' for v in is_plus]
+    return ['background-color: ##d6972e' if v else '' for v in is_plus]
 
 def highlight2(s):
     is_plus = s == 'Over +'
-    return ['background-color: #6BB8FF' if v else '' for v in is_plus]
+    return ['background-color: ##d6972e' if v else '' for v in is_plus]
 
 with dataset:
     df = pd.DataFrame(rows)
