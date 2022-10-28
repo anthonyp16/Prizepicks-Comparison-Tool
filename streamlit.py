@@ -25,7 +25,7 @@ with header:
     st.title("Prizepicks Line Comparison Tool")
     st.subheader("Quick Summary")
     st.markdown("Prizepicks has countless sports picks playing at a given time. And lots of those picks are being offered on other sportsbooks, and we can use that to our advantage.\
-        Every play on Prizepicks is **assumed to be 50/50, but that's impossible for every line.** You can go to a sportsbook *(Draftkings in this case)* and compare the odds.")
+        Every play on Prizepicks is **assumed to be 50/50,** but that's impossible for every line. You can go to a sportsbook *(Draftkings in this case)* and compare the odds.")
     st.markdown("*For example, Lionel Messi at 2 Shots is being offered on Prizepicks as an over/under, but on Draftkings, the over is -150 (60%). This is **not** a 50/50 play, there is a favor towards the over.*")
 
 def highlight(s):
