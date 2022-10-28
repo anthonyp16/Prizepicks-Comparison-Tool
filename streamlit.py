@@ -37,6 +37,7 @@ def highlight2(s):
     return ['background-color: #A4DFFF' if v else '' for v in is_plus]
 
 with dataset:
+    st.markdown("""---""")
     df = pd.DataFrame(rows)
     
 #     #df = pd.read_csv("MAIN_TABLE.csv")
