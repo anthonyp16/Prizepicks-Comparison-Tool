@@ -25,11 +25,11 @@ filters = st.container()
 FAQs = st.container()
 
 with header:
-    st.title("Prizepicks Line Comparison Tool")
+    st.title("PrizePicks Line Comparison Tool")
     st.subheader("Quick Summary")
-    st.markdown("Prizepicks has countless sports picks playing at a given time. And lots of those picks are being offered on other sportsbooks, and we can use that to our advantage.\
-        Every play on Prizepicks is **assumed to be 50/50,** but that's unlikely for every line. You can go to a sportsbook *(Draftkings in this case)* and play the odds.")
-    st.markdown("*For example, Lionel Messi at 2 Shots is being offered on Prizepicks as an over/under, but on Draftkings, the over is -150 (60%). This is **not** a 50/50 play, there is a favor towards the over.*")
+    st.markdown("PrizePicks has countless sports picks playing at a given time. And lots of those picks are being offered on other sportsbooks, and we can use that to our advantage.\
+        Every play on PrizePicks is **assumed to be 50/50,** but that's unlikely for every line. You can go to a sportsbook *(Draftkings in this case)* and play the odds.")
+    st.markdown("*For example, Lionel Messi at 2 Shots is being offered on PrizePicks as an over/under, but on Draftkings, the over is -150 (60%). This is **not** a 50/50 play, there is a favor towards the over.*")
 
 def highlight(s):
     is_plus = s == 'Under +'
@@ -65,9 +65,9 @@ with FAQs:
         st.markdown("Yes. While similar tools can cost around \$20-\$100/Month, this tool will remain completely free. :smile:")
     with st.expander("What do the blue highlights mean?"):
         st.markdown('You may notice that there are rows in the *Favor* column that say *"Under +"* or *"Over +"*.\
-            The plus sign signifies an additonal edge for this pick. It means the tool found a favor towards Over or Under, as well as a better line on Prizepicks.')
-        st.markdown("*For example, Steph Curry at 28.5 points is being offered on Prizepicks, but on Draftkings, the over is -135 (57%)\
-            **and** the line is 31 points. The odds are **actually better than they appear** because of the better line on Prizepicks.*")
+            The plus sign signifies an additonal edge for this pick. It means the tool found a favor towards Over or Under, as well as a better line on PrizePicks.')
+        st.markdown("*For example, Steph Curry at 28.5 points is being offered on PrizePicks, but on Draftkings, the over is -135 (57%)\
+            **and** the line is 31 points. The odds are **actually better than they appear** because of the better line on PrizePicks.*")
     with st.expander("The table is too small. How do I make it larger?"):
         st.markdown("**Option 1:** Hover over the table until a icon with two diagonal arrows appears. Click that and the table will take up your whole screen.")
         st.markdown("**Option 2:** Click the menu icon on the top right *(3 Vertical lines)*. Then click Settings -> Wide Mode.")
