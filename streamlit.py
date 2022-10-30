@@ -2,6 +2,9 @@ from time import strftime
 import streamlit as st
 import pandas as pd
 from gsheetsdb import connect
+
+st.set_page_config(page_title="PrizePicks Odds", page_icon=":moneybag:")
+
 conn = connect()
 
 # Perform SQL query on the Google Sheet.
