@@ -57,7 +57,7 @@ with dataset:
     .format({"Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))})\
     .apply(highlight)\
     .apply(highlight2), use_container_width=True)
-    st.markdown("DATA REFRESH EVERY 60 MINUTES. REFRESH PAGE ACCORDINGLY.")
+
 
 with FAQs:
     st.markdown("""---""")
