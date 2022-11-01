@@ -61,12 +61,12 @@ with dataset:
     st.markdown("""
         <style>
         .big-font {
-            font-size:3px !important;
+            font-size:12px !important;
         }
         </style>
         """, unsafe_allow_html=True)
 
-    st.markdown('<p class="big-font">Hello World !!</p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font">Data refresh every 15 minutes. Refresh to update.</p>', unsafe_allow_html=True)
 
 with FAQs:
     st.markdown("""---""")
