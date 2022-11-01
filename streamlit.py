@@ -7,7 +7,6 @@ st.set_page_config(page_title="PrizePicks Odds", page_icon=":moneybag:")
 
 conn = connect()
 
-# Perform SQL query on the Google Sheet.
 # Uses st.cache to only rerun when the query changes or after 3 min.
 @st.cache(ttl=180)
 def run_query(query):
@@ -66,7 +65,7 @@ with dataset:
         </style>
         """, unsafe_allow_html=True)
 
-    st.markdown('<p class="big-font">Data refresh every 15 minutes. Refresh to update.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font">Updates every 15 minutes. Refresh to update.</p>', unsafe_allow_html=True)
 
 with FAQs:
     st.markdown("""---""")
