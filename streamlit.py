@@ -58,6 +58,15 @@ with dataset:
     .apply(highlight)\
     .apply(highlight2), use_container_width=True)
 
+    st.markdown("""
+        <style>
+        .big-font {
+            font-size:3px !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
+    st.markdown('<p class="big-font">Hello World !!</p>', unsafe_allow_html=True)
 
 with FAQs:
     st.markdown("""---""")
