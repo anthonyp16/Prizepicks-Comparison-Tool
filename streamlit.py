@@ -53,13 +53,13 @@ with dataset:
 #     # .apply(highlight2))
 
     st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability', color='#48F084', q_right=1, q_left=0.8)\
-    .format({"Over": "{:.0f}","Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))})\
+    .format({"Over": "{:.0f}","Under": "{:.0f}","Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))})\
     .apply(highlight)\
     .apply(highlight2), use_container_width=True)
 
     st.markdown("""
         <style>
-        .big-font {
+        .small-font {
             font-size:12px !important;
         }
         </style>
@@ -72,11 +72,11 @@ with FAQs:
     st.subheader("FAQs")
     with st.expander("Is this tool free?"):
         st.markdown("Yes. While similar tools can cost around \$20-\$100/Month, this tool will remain completely free. :smile:")
+    with st.expander("The table is too small. How do I make it larger?"):
+        st.markdown("**Option 1:** Hover over the table until a icon with two diagonal arrows appears. Click that and the table will take up your whole screen.")
+        st.markdown("**Option 2:** Click the menu icon on the top right *(3 Vertical lines)*. Then click Settings -> Wide Mode.")
     with st.expander("What do the blue highlights mean?"):
         st.markdown('You may notice that there are rows in the *Favor* column that say *"Under +"* or *"Over +"*.\
             It means the tool found a favor towards Over or Under, as well as a better line on PrizePicks. The plus sign signifies an additonal edge for this pick. ')
         st.markdown("*For example, Steph Curry at 28.5 points is being offered on PrizePicks, but on Draftkings, the over is -135 (57%)\
             **and** the line is 31 points. The odds are **actually better than they appear** because of the better line on PrizePicks.*")
-    with st.expander("The table is too small. How do I make it larger?"):
-        st.markdown("**Option 1:** Hover over the table until a icon with two diagonal arrows appears. Click that and the table will take up your whole screen.")
-        st.markdown("**Option 2:** Click the menu icon on the top right *(3 Vertical lines)*. Then click Settings -> Wide Mode.")
