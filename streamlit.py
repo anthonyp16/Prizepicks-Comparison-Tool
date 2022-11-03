@@ -53,19 +53,19 @@ with dataset:
 #     # .apply(highlight)\
 #     # .apply(highlight2))
     st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability', color='#48F084', q_right=1, q_left=0.8)\
-    .format({"Over": "{:.0f}","Under": "{:.0f}","Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))})\
+    .format({"Over": "{:.0f}", "Under": "{:.0f}", "Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))})\
     .apply(highlight)\
     .apply(highlight2), use_container_width=True)
 
-    st.markdown("""
-        <style>
-        .small-font {
-            font-size:12px !important;
-        }
-        </style>
-        """, unsafe_allow_html=True)
+    # st.markdown("""
+    #     <style>
+    #     .small-font {
+    #         font-size:12px !important;
+    #     }
+    #     </style>
+    #     """, unsafe_allow_html=True)
 
-    st.markdown('<p class="small-font">Updates every 15 minutes. Refresh to update.</p>', unsafe_allow_html=True)
+    # st.markdown('<p class="small-font">Updates every 15 minutes. Refresh to update.</p>', unsafe_allow_html=True)
 
 with FAQs:
     st.markdown("""---""")
