@@ -53,7 +53,7 @@ with dataset:
 #     # .apply(highlight)\
 #     # .apply(highlight2))
     st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability', color='#48F084', q_right=1, q_left=0.8)\
-    .format({"Over": "{:.0f}", "Under": "{:.0f}", "Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M")).format({'Over':'{:+d}'})})\
+    .format({"Over": "{:.0f}", "Under": "{:.0f}", "Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M")).format({"Over":"{:+d}"})})\
     .apply(highlight)\
     .apply(highlight2), use_container_width=True)
 
