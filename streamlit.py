@@ -41,6 +41,7 @@ def highlight2(s):
 with dataset:
     st.markdown("""---""")
     df = pd.DataFrame(rows)
+    df.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Last Updated', 'Line','Over', 'Under', 'Probability', 'Favor']
     
 #     #df = pd.read_csv("MAIN_TABLE.csv")
    # df.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Last Updated', 'Line', 'Probability', 'Favor']
@@ -51,7 +52,6 @@ with dataset:
 #     # .format({"Line": "{:.1f}", "Probability (%)": "{:.1f}"})\
 #     # .apply(highlight)\
 #     # .apply(highlight2))
-    df.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Last Updated', 'Line','Over', 'Under', 'Probability', 'Favor']
     st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability', color='#48F084', q_right=1, q_left=0.8)\
     .format({"Over": "{:.0f}","Under": "{:.0f}","Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))})\
     .apply(highlight)\
