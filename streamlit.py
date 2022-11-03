@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 from gsheetsdb import connect
 
-st.set_page_config(page_title="PrizePicks Odds", page_icon=":moneybag:")
+st.set_page_config(page_title="PrizePicks Odds", page_icon=":moneybag:", )
 
 conn = connect()
 
@@ -55,7 +55,7 @@ with dataset:
     st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability', color='#48F084', q_right=1, q_left=0.8)\
     .format({"Over": "{:.0f}","Under": "{:.0f}","Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))})\
     .apply(highlight)\
-    .apply(highlight2), use_container_width=True)
+    .apply(highlight2))
 
     st.markdown("""
         <style>
