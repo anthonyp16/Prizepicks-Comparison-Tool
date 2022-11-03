@@ -44,7 +44,7 @@ with dataset:
     df = pd.DataFrame(rows)
     df.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Last Updated', 'Line','Over', 'Under', 'Probability', 'Favor']
     
-#     #df = pd.read_csv("MAIN_TABLE.csv")
+   #df = pd.read_csv("MAIN_TABLE.csv")
    # df.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Last Updated', 'Line', 'Probability', 'Favor']
     sports = st.multiselect('Filter by Sport', df['Sport'].unique(), default=df['Sport'].unique())
 
@@ -58,15 +58,15 @@ with dataset:
     .apply(highlight)\
     .apply(highlight2), use_container_width=True)
 
-    # st.markdown("""
-    #     <style>
-    #     .small-font {
-    #         font-size:12px !important;
-    #     }
-    #     </style>
-    #     """, unsafe_allow_html=True)
+    st.markdown("""
+        <style>
+        .small-font {
+            font-size:12px !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
 
-    # st.markdown('<p class="small-font">Updates every 15 minutes. Refresh to update.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="small-font">Updates every 15 minutes. Refresh to update.</p>', unsafe_allow_html=True)
 
 with FAQs:
     st.markdown("""---""")
