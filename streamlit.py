@@ -43,7 +43,7 @@ with dataset:
     df = pd.DataFrame(rows)
     
 #     #df = pd.read_csv("MAIN_TABLE.csv")
-    df.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Last Updated', 'Line', 'Probability', 'Favor']
+   # df.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Last Updated', 'Line', 'Probability', 'Favor']
     sports = st.multiselect('Filter by Sport', df['Sport'].unique(), default=df['Sport'].unique())
 
     filtered_df = df[df["Sport"].isin(sports)]
