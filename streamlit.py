@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 from gsheetsdb import connect
 
-st.set_page_config(page_title="PrizePicks Odds", page_icon=":moneybag:", layot='wide')
+st.set_page_config(page_title="PrizePicks Odds", page_icon=":moneybag:", layout='wide')
 
 conn = connect()
 
