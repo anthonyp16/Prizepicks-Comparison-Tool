@@ -51,7 +51,7 @@ with dataset:
 #     # .format({"Line": "{:.1f}", "Probability (%)": "{:.1f}"})\
 #     # .apply(highlight)\
 #     # .apply(highlight2))
-
+    df.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Last Updated', 'Line','Over', 'Under', 'Probability', 'Favor']
     st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability', color='#48F084', q_right=1, q_left=0.8)\
     .format({"Over": "{:.0f}","Under": "{:.0f}","Line": "{:.1f}", "Probability": "{:.1f}%", "Last Updated": lambda x: "{}".format(x.strftime("%m/%d/%y %H:%M"))})\
     .apply(highlight)\
@@ -65,7 +65,7 @@ with dataset:
         </style>
         """, unsafe_allow_html=True)
 
-    st.markdown('<p class="big-font">Updates every 15 minutes. Refresh to update.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="small-font">Updates every 15 minutes. Refresh to update.</p>', unsafe_allow_html=True)
 
 with FAQs:
     st.markdown("""---""")
