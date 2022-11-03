@@ -61,7 +61,7 @@ with dataset:
     st.markdown("""
         <style>
         .small-font {
-            font-size:12px !important;
+            font-size:14px !important;
         }
         </style>
         """, unsafe_allow_html=True)
