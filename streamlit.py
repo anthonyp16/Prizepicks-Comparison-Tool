@@ -24,7 +24,7 @@ filters = st.container()
 FAQs = st.container()
 
 with header:
-    st.title("PrizePicks Line Comparison Tool")
+    st.title("PrizePicks Comparison Tool")
     st.subheader("Quick Summary")
     st.markdown("PrizePicks has countless sports picks playing at a given time. Lots of those picks are being offered on other sportsbooks, and we can use that to our advantage.\
         Every play on PrizePicks is **assumed to be 50/50,** but that's unlikely for every line. You can go to a sportsbook *(Draftkings in this case)* and play the odds.\
