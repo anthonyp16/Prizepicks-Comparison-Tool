@@ -30,7 +30,7 @@ with header:
         Every play on PrizePicks is **assumed to be 50/50,** but that's unlikely for every line. You can go to a sportsbook *(Draftkings in this case)* and play the odds.\
         This tool finds plays with the same line on PrizePicks and Draftkings and displays them in the table below.")
     st.markdown("*For example, Lionel Messi at 2 Shots is being offered on PrizePicks as an over/under, but on Draftkings, the over is -150 (60%). This is **not** a 50/50 play, there is a favor towards the over.*")
-    st.markdown("*Sports currently supported: NBA, NHL, MLB, NFL.*")
+    st.markdown("**Sports currently supported: NBA, NHL, MLB, NFL.**")
 def highlight(s):
     is_plus = s == 'Under +'
     return ['background-color: #A4DFFF' if v else '' for v in is_plus]
