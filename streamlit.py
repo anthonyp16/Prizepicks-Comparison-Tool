@@ -26,10 +26,10 @@ FAQs = st.container()
 with header:
     st.title("PrizePicks Line Comparison Tool")
     st.subheader("Quick Summary")
-    st.markdown("PrizePicks has countless sports picks playing at a given time. And lots of those picks are being offered on other sportsbooks, and we can use that to our advantage.\
+    st.markdown("PrizePicks has countless sports picks playing at a given time. Lots of those picks are being offered on other sportsbooks, and we can use that to our advantage.\
         Every play on PrizePicks is **assumed to be 50/50,** but that's unlikely for every line. You can go to a sportsbook *(Draftkings in this case)* and play the odds.\
         This tool finds plays with the same line on PrizePicks and Draftkings and displays them in the table below.\
-        Sports currently supported: NBA, NHL, MLB, NFL")
+        Sports currently supported: NBA, NHL, MLB, NFL.")
     st.markdown("*For example, Lionel Messi at 2 Shots is being offered on PrizePicks as an over/under, but on Draftkings, the over is -150 (60%). This is **not** a 50/50 play, there is a favor towards the over.*")
 
 def highlight(s):
