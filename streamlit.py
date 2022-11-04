@@ -80,4 +80,4 @@ with FAQs:
         st.markdown("*For example, Steph Curry at 28.5 points is being offered on PrizePicks, but on Draftkings, the over is -135 (57%)\
             **and** the line is 31 points. The odds are **actually better than they appear** because of the better line on PrizePicks.*")
     with st.expander("What sports are supported?"):
-        st.markdown("Sports currently supported: NFL, NHL, NBA, MLB")
+        st.markdown("Sports currently supported: NFL, NHL, NBA, & MLB.")
