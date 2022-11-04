@@ -30,7 +30,6 @@ with header:
         Every play on PrizePicks is **assumed to be 50/50,** but that's unlikely for every line. You can go to a sportsbook *(Draftkings in this case)* and play the odds.\
         This tool finds plays with the same line on PrizePicks and Draftkings and displays them in the table below.")
     st.markdown("*For example, Lionel Messi at 2 Shots is being offered on PrizePicks as an over/under, but on Draftkings, the over is -150 (60%). This is **not** a 50/50 play, there is a favor towards the over.*")
-    st.markdown("**Sports currently supported: NBA, NHL, MLB, NFL.**")
 def highlight(s):
     is_plus = s == 'Under +'
     return ['background-color: #A4DFFF' if v else '' for v in is_plus]
@@ -80,3 +79,5 @@ with FAQs:
             It means the tool found a favor towards Over or Under, as well as a better line on PrizePicks. The plus sign signifies an additonal edge for this pick. ')
         st.markdown("*For example, Steph Curry at 28.5 points is being offered on PrizePicks, but on Draftkings, the over is -135 (57%)\
             **and** the line is 31 points. The odds are **actually better than they appear** because of the better line on PrizePicks.*")
+    with st.expander("What sports are supported?"):
+        st.markdown("Sports currently supported: NFL, NHL, NBA, MLB")
