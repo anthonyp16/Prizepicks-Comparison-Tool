@@ -3,5 +3,4 @@ gsheetsdb==0.1.13.1
 numpy==1.23.3
 pandas==1.5.0
 playwright==1.26.1
-#Pygments==2.13.0
 pygsheets==2.0.5
