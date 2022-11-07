@@ -45,8 +45,10 @@ with dataset:
     
    #df = pd.read_csv("MAIN_TABLE.csv")
     sports = st.multiselect('Filter by Sport', df['Sport'].unique(), default=df['Sport'].unique())
-
+    ss_mode = st.checkbox('Screenshot Mode')
     filtered_df = df[df["Sport"].isin(sports)]
+    if ss_mode:
+        filtered_df.drop(['Last Updated', 'Sport', 'Team'])
 #     # st.dataframe(filtered_df.style.highlight_quantile(axis=0, subset='Probability (%)', color='SpringGreen', q_right=1, q_left=0.8)\
 #     # .format({"Line": "{:.1f}", "Probability (%)": "{:.1f}"})\
 #     # .apply(highlight)\
