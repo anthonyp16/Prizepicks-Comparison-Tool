@@ -76,7 +76,7 @@ with FAQs:
         st.markdown("**Option 2:** Click the menu icon on the top right *(3 Vertical lines)*. Then click Settings -> Wide Mode.")
     with st.expander("What do the blue highlights mean?"):
         st.markdown('You may notice that there are rows in the *Favor* column that say *"Under +"* or *"Over +"*.\
-            This means there is a **Favored Line** and there is an additonal edge for this play.')
+            This means there is a **Favored Line** and an additonal edge for this play.')
         st.markdown("*For example, Steph Curry at 28.5 points is being offered on PrizePicks, but on Draftkings, the over is -135 (57%)\
             **and** the line is 31 points. The odds are **actually better than they appear** because of the better line on PrizePicks.*")
     with st.expander("What sports are supported?"):
