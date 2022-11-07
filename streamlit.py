@@ -41,7 +41,7 @@ def highlight2(s):
 with dataset:
     st.markdown("""---""")
     df = pd.DataFrame(rows)
-    df.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Last Updated', 'Line','Over', 'Under', 'Probability', 'Favor']
+    df.columns = ['Player', 'Team', 'Sport', 'Stat Type', 'Line','Over', 'Under', 'Probability', 'Favor', 'Last Updated']
     
    #df = pd.read_csv("MAIN_TABLE.csv")
     sports = st.multiselect('Filter by Sport', df['Sport'].unique(), default=df['Sport'].unique())
