@@ -45,7 +45,7 @@ with dataset:
     
    #df = pd.read_csv("MAIN_TABLE.csv")
     sports = st.multiselect('Filter by Sport', df['Sport'].unique(), default=df['Sport'].unique())
-    ss_mode = st.checkbox('Screenshot Mode')
+    ss_mode = st.checkbox('Screenshot Mode', value=False)
     filtered_df = df[df["Sport"].isin(sports)]
     if ss_mode:
         filtered_df = filtered_df.drop(['Last Updated', 'Sport', 'Team'], axis=1)
