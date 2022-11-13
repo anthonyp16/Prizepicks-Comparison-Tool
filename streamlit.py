@@ -76,7 +76,7 @@ with FAQs:
         st.markdown('**Long answer:** Playing a pick with a high probability percentage doesn\'t guarantee you a win. \
             However, you have an edge from playing the favor. And you can significantly improve your win rate by pairing good research with high-probability picks.\
                 An important aspect of this strategy is that you win in the long run.\
-                    Another recommendation would be to aim for plays that are -150 or above for the "safer" picks.')
+                    Another recommendation would be to aim for plays that are -150 or better for the "safer" picks.')
     with st.expander("Is this tool free?"):
         st.markdown("Yes. While similar tools can cost around \$15-\$50/Month, this tool will remain completely free. :smile:")
     with st.expander("The table is too small. How do I make it larger?"):
