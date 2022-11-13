@@ -1,5 +1,6 @@
 from time import strftime
 import streamlit as st
+import streamlit_analytics
 import pandas as pd
 from gsheetsdb import connect
 
@@ -36,7 +37,7 @@ def highlight(s):
 def highlight2(s):
     is_plus = s == 'Over +'
     return ['background-color: #A4DFFF' if v else '' for v in is_plus]
-
+streamlit_analytics.start_tracking()
 with dataset:
     st.markdown("""---""")
     df = pd.DataFrame(rows)
@@ -66,6 +67,7 @@ with dataset:
         """, unsafe_allow_html=True)
 
     st.markdown('<p class="small-font">Updates every 15 minutes. Refresh to update.</p>', unsafe_allow_html=True)
+streamlit_analytics.stop_tracking()
 
 with FAQs:
     st.markdown("""---""")
