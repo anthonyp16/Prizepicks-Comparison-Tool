@@ -72,8 +72,8 @@ with FAQs:
     st.markdown("""---""")
     st.subheader("FAQs")
     with st.expander("How do I use this tool?"):
-        st.markdown("Short answer: Find 2-5 plays and play them on PrizePicks.")
-        st.markdown('Long answer: Playing a pick with a high probability percentage doesn\'t guarantee you a win. \
+        st.markdown("**Short answer:** Find 2-5 plays you like and play them on PrizePicks.")
+        st.markdown('**Long answer:** Playing a pick with a high probability percentage doesn\'t guarantee you a win. \
             However, you have an edge from playing the favor. And you can significantly improve your win rate by pairing good research with high-probability picks.\
                 An important aspect of this strategy is that you win in the long run.\
                     Another recommendation would be to aim for plays that are -150 or above for the "safer" picks.')
