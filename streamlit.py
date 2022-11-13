@@ -14,7 +14,6 @@ def run_query(query):
     rows = rows.fetchall()
     return rows
 
-
 sheet_url = st.secrets["public_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
