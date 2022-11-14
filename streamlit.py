@@ -70,7 +70,7 @@ with header:
     st.markdown("PrizePicks has countless sports picks playing at a given time. Lots of those picks are being offered on other sportsbooks, and you can use that to your advantage.\
         Every play on PrizePicks is *assumed to be 50/50,* but that's unlikely for every line. You can go to a sportsbook *(Draftkings in this case)* and play the odds.\
         **This tool finds plays with the same line on PrizePicks and Draftkings and displays them in the table below.**")
-    st.markdown("*For example, Lionel Messi at 2 Shots is being offered on PrizePicks as an over/under, but on Draftkings, the over is -150 (60%). This is **not** a 50/50 play, there is a favor towards the over.*")
+    st.markdown("*For example, Jayson Tatum at 30 Points is being offered on PrizePicks as an over/under, but on Draftkings, the over is -150 (60%). This is **not** a 50/50 play, there is a favor towards the over.*")
 def highlight(s):
     is_plus = s == 'Under +'
     return ['background-color: #A4DFFF' if v else '' for v in is_plus]
@@ -78,7 +78,7 @@ def highlight(s):
 def highlight2(s):
     is_plus = s == 'Over +'
     return ['background-color: #A4DFFF' if v else '' for v in is_plus]
-streamlit_analytics.start_tracking()
+
 with dataset:
     st.markdown("""---""")
     df = pd.DataFrame(rows)
@@ -108,7 +108,7 @@ with dataset:
         """, unsafe_allow_html=True)
 
     st.markdown('<p class="small-font">Updates every 15 minutes. Refresh to update.</p>', unsafe_allow_html=True)
-streamlit_analytics.stop_tracking()
+
 
 with FAQs:
     st.markdown("""---""")
