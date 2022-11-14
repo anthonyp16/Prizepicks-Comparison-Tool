@@ -1,7 +1,10 @@
-fuzzywuzzy==0.18.0
 gsheetsdb==0.1.13.1
-numpy==1.23.3
 pandas==1.5.0
-playwright==1.26.1
+bs4==0.0.1
 pygsheets==2.0.5
 streamlit-analytics==0.4.1
+
+
+#numpy==1.23.3
+#fuzzywuzzy==0.18.0
+#playwright==1.26.1
