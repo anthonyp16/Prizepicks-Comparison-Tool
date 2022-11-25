@@ -66,7 +66,6 @@ FAQs = st.container()
 
 with header:
     st.title("PrizePicks Comparison Tool")
-    st.title("Service is currently down. Check back tomorrow or later today.")
     st.subheader("Quick Summary")
     st.markdown("PrizePicks has countless sports picks playing at a given time. Lots of those picks are being offered on other sportsbooks, and you can use that to your advantage.\
         Every play on PrizePicks is *assumed to be 50/50,* but that's unlikely for every line. You can go to a sportsbook *(Draftkings in this case)* and play the odds.\
