@@ -120,8 +120,6 @@ with FAQs:
             However, you have an edge from playing the favor. And you can significantly improve your win rate by pairing good research with high-probability picks.\
                 An important aspect of this strategy is that you win in the long run.\
                     Another recommendation would be to aim for plays that are -150 or better for the "safer" picks.')
-    with st.expander("Is this tool free?"):
-        st.markdown("Yes. While similar tools can cost around \$15-\$50/Month, this tool will remain completely free. :smile:")
     with st.expander("The table is too small. How do I make it larger?"):
         st.markdown("**Option 1:** Hover over the table until a icon with two diagonal arrows appears. Click that and the table will take up your whole screen.")
         st.markdown("**Option 2:** Click the menu icon on the top right *(3 Vertical lines)*. Then click Settings -> Wide Mode.")
